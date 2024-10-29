@@ -10,7 +10,7 @@ function Request() {
   // Fetch received requests when component mounts
   const fetchRequests = async () => {
     try {
-      const res = await axios.get(BASE_URL + "/receivedConnectionRequests", {
+      const res = await axios.get(BASE_URL + "/api/receivedConnectionRequests", {
         withCredentials: true, // Ensure user is authenticated
       });
 
@@ -32,7 +32,7 @@ function Request() {
   const handleAccept = async (requestId) => {
     try {
       await axios.patch(
-        BASE_URL + `/respondToConnection/accepted/${requestId}`,
+        BASE_URL + `/api/respondToConnection/accepted/${requestId}`,
         {},
         {
           withCredentials: true,
@@ -49,7 +49,7 @@ function Request() {
   const handleReject = async (requestId) => {
     try {
       await axios.patch(
-        BASE_URL + `/respondToConnection/rejected/${requestId}`,
+        BASE_URL + `/api/respondToConnection/rejected/${requestId}`,
         {},
         {
           withCredentials: true,

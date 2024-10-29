@@ -11,7 +11,7 @@ function Feed() {
   // Fetch user feed
   const fetchFeed = async () => {
     try {
-      const res = await axios.get(BASE_URL + "/feed", {
+      const res = await axios.get(BASE_URL + "/api/feed", {
         withCredentials: true, // Ensure the user is authenticated
       });
 
@@ -39,7 +39,7 @@ function Feed() {
     try {
       // Send the 'Interested' request to the backend
       const response = await axios.post(
-        `${BASE_URL}/sendConnectionRequest/interested/${currentUser._id}`,
+        `${BASE_URL}/api/sendConnectionRequest/interested/${currentUser._id}`,
         null,
         { withCredentials: true }
       );

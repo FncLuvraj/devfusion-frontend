@@ -18,7 +18,7 @@ function EditProfile({ userDetails, onInputChange }) {
 
     try {
       // Send the updated userDetails to the server
-      const response = await axios.patch(BASE_URL + "/update", userDetails, {
+      const response = await axios.patch(BASE_URL + "/api/update", userDetails, {
         withCredentials: true,
       });
 
