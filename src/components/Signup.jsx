@@ -30,7 +30,7 @@ const Signup = () => {
   const handleSignUp = async () => {
     try {
       const res = await axios.post(
-        `${BASE_URL}/signup`,
+        `${BASE_URL}/api/signup`,
         {
           firstName,
           lastName,

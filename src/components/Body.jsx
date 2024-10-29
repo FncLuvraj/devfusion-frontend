@@ -20,7 +20,7 @@ const Body = () => {
   const fetchUser = async () => {
     if (userData) return;
     try {
-      const res = await axios.get(BASE_URL + "/profileview", {
+      const res = await axios.get(BASE_URL + "/api/profileview", {
         withCredentials: true,
       });
       dispatch(adduser(res.data));
